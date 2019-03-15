@@ -20,47 +20,61 @@ namespace DFS
         private bool[] visited;
         //query
         private Tuple<int, int, int>[] query;
-        
 
-        public void getInput()
+        public void getInput(string s)
         {
-            N = Convert.ToInt32(Console.ReadLine());
-            Adj = new List<List<int>>();
-            for (int i = 0; i < N; i++)
+            string[] lines = System.IO.File.ReadAllLines(s);
+            int cnt = 0;
+            int qcnt = 0;
+            foreach (string line in lines)
             {
-                List<int> tmp = new List<int>();
-                Adj.Add(tmp);
+                if (cnt == 0)
+                {
+                    cnt++;
+                    N = Convert.ToInt32(line);
+                    Adj = new List<List<int>>();
+                    for (int i = 0; i < N; i++)
+                    {
+                        List<int> tmp = new List<int>();
+                        Adj.Add(tmp);
+                    }
+                    ancestor = new int[N];
+                    visited = new bool[N];
+                    for (int i = 0; i < N; i++)
+                    {
+                        ancestor[i] = -1;
+                        visited[i] = false;
+                    }
+                }
+                else if (cnt < N)
+                {
+                    string[] inp = line.Split(' ');
+                    int a, b;
+                    a = Convert.ToInt32(inp[0]);
+                    b = Convert.ToInt32(inp[1]);
+                    a--; b--;
+                    Adj[a].Add(b);
+                    Adj[b].Add(a);
+                    cnt++;
+                }
+                else if (cnt == N)
+                {
+                    Q = Convert.ToInt32(line);
+                    cnt++;
+                    query = new Tuple<int, int, int>[Q];
+                }
+                else
+                {
+                    string[] inp = line.Split(' ');
+                    int t, a, b;
+                    t = Convert.ToInt32(inp[0]);
+                    a = Convert.ToInt32(inp[1]);
+                    b = Convert.ToInt32(inp[2]);
+                    a--; b--;
+                    query[qcnt] = Tuple.Create(t, a, b);
+                    qcnt++;
+                }
             }
-            ancestor = new int[N];
-            visited = new bool[N];
-            for (int i = 0; i < N; i++)
-            {
-                ancestor[i] = -1;
-                visited[i] = false;
-            }
-            for (int i = 0; i < N - 1; i++)
-            {
-                int a, b;
-                string[] x = Console.ReadLine().Split(' ');
-                a = Convert.ToInt32(x[0]);
-                b = Convert.ToInt32(x[1]);
-                a--; b--;
-                Adj[a].Add(b);
-                Adj[b].Add(a);
-            }
-            Q = Convert.ToInt32(Console.ReadLine());
-            query = new Tuple<int, int, int>[Q];
-            for (int i = 0; i < Q; i++)
-            {
-                string[] inp = Console.ReadLine().Split(' ');
-                int t, a, b;
-                t = Convert.ToInt32(inp[0]);
-                a = Convert.ToInt32(inp[1]);
-                b = Convert.ToInt32(inp[2]);
-                a--; b--;
-                query[i] = Tuple.Create(t, a, b);
-            }
-
         }
 
         public void generate(int node)
@@ -95,7 +109,7 @@ namespace DFS
             }
             if (x == y) return true;
             else return false;
-        }   
+        }
 
         public void Solve()
         {
