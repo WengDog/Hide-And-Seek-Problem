@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F0FBB5C7-4031-4A72-9AB3-5C133AD3D707}</ProjectGuid>
+    <ProjectGuid>{0CB0CA97-EFE5-418A-924B-DC02D68C4442}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>DFS</RootNamespace>
     <AssemblyName>DFS</AssemblyName>
@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DFS.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
