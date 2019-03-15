@@ -20,7 +20,7 @@ namespace DFS
         private bool[] visited;
         //query
         private Tuple<int, int, int>[] query;
-
+        
         public void getInput(string s)
         {
             string[] lines = System.IO.File.ReadAllLines(s);
@@ -109,7 +109,7 @@ namespace DFS
             }
             if (x == y) return true;
             else return false;
-        }
+        }   
 
         public void Solve()
         {

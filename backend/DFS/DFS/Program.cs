@@ -11,7 +11,6 @@ namespace DFS
         static void Main(string[] args)
         {
             DFS tmp = new DFS();
-            //testing file eksternal
             tmp.getInput("H:\\Testing.txt");
             tmp.Solve();
         }
