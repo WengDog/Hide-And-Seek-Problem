@@ -34,3 +34,5 @@ F:\Hide-And-Seek-Problem\WpfApp2\WpfApp2\obj\Debug\WpfApp2.csproj.GenerateResour
 F:\Hide-And-Seek-Problem\WpfApp2\WpfApp2\obj\Debug\WpfApp2.csproj.CoreCompileInputs.cache
 F:\Hide-And-Seek-Problem\WpfApp2\WpfApp2\obj\Debug\WpfApp2.exe
 F:\Hide-And-Seek-Problem\WpfApp2\WpfApp2\obj\Debug\WpfApp2.pdb
+F:\Hide-And-Seek-Problem\WpfApp2\WpfApp2\obj\Debug\Page2.g.cs
+F:\Hide-And-Seek-Problem\WpfApp2\WpfApp2\obj\Debug\Page2.baml

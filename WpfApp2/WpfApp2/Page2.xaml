@@ -11,7 +11,7 @@
     <Grid>
         <Canvas HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="800" Margin="0,0,0,-0.4" Background="#FF2C486F"/>
         <Label Content="JAWABAN" FontSize="72" FontFamily="Berlin Sans FB Demi" Margin="223,10,241,355.6"/>
-        <Button Content="LIHAT JAWABAN" HorizontalAlignment="Left" VerticalAlignment="Top" Width="184" Margin="310,183,0,0" Height="98" FontSize="22" Background="#FFCD8D4D" FontFamily="Berlin Sans FB" Click="Button_Click"/>
+        <TextBox HorizontalAlignment="Left" Height="302" TextWrapping="Wrap" VerticalAlignment="Top" Width="594" Margin="97,102,0,0" FontSize="18" Text="List Jawaban" FontFamily="Berlin Sans FB" TextChanged="TextBox_TextChanged"/>
 
     </Grid>
 </Page>

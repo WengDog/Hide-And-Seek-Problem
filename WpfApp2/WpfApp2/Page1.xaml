@@ -13,9 +13,9 @@
         <Canvas HorizontalAlignment="Left" Height="440" VerticalAlignment="Top" Width="800" Background="#FF2C486F">
             <Button Content="FILE PETA" Width="215" Canvas.Left="83" Canvas.Top="147" Height="59" Background="#FFCD8D4D" Click="Button_Click" FontSize="48" FontFamily="Berlin Sans FB"/>
             <Button Content="FILE QUERY" Width="257" Canvas.Left="83" Canvas.Top="229" Background="#FFCD8D4D" Height="59" Click="Button_Click_1" FontSize="48" FontFamily="Berlin Sans FB"/>
-            <TextBox x:Name="TxtBox" Height="59" TextWrapping="Wrap" Text="QUERY MANUAL" Width="257" Canvas.Left="453" Canvas.Top="147" TextChanged="TextBox_TextChanged" FontFamily="Berlin Sans FB" FontSize="18"/>
             <Button Content="INPUT QUERY MANUAL" Width="257" Canvas.Left="453" Canvas.Top="228" Height="60" Background="#FFCD8D4D" Click="Button_Click_2" FontSize="24" FontFamily="Berlin Sans FB"/>
-            <Button Content="CEK JAWABAN" Width="248" Canvas.Left="275" Canvas.Top="334" Height="64" FontFamily="Berlin Sans FB" FontSize="36" Background="#FFCD8D4D" Click="Button_Click_3"/>
+            <Button Content="JAWABAN" Width="248" Canvas.Left="275" Canvas.Top="334" Height="64" FontFamily="Berlin Sans FB" FontSize="36" Background="#FFCD8D4D" Click="Button_Click_3"/>
+            <TextBox x:Name="TxtBox" AcceptsReturn="True" Height="59" TextWrapping="Wrap" Width="257" Canvas.Left="453" Canvas.Top="147" FontSize="18" FontFamily="Berlin Sans FB"/>
         </Canvas>
         <Label Content="HIDE AND SEEK" FontSize="72" FontFamily="Berlin Sans FB Demi" Margin="144,10,132,326.6"/>
 

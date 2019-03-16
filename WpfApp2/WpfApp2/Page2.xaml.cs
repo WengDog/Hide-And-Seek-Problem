@@ -37,20 +37,19 @@ namespace WpfApp2
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e) //untuk menampilkan jawaban dari query
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             if (banyakJawaban == 0)
             {
-
+                //tidak ada jawaban
             }
             else
             {
                 int i = 0;
                 while (i < banyakJawaban)
                 {
-
+                    //jawaban per line
                 }
-
             }
         }
     }

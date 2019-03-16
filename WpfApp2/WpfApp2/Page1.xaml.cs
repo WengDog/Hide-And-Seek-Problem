@@ -51,19 +51,14 @@ namespace WpfApp2
             tes.getInputQuery(fileQuery.FileName);
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e) //buat input query secara manual tapi baru bisa satu query doang
+        private void Button_Click_2(object sender, RoutedEventArgs e) //buat input query secara manual dengan cara diubah ke tes.txt baru dibaca
         {
-            string[] query = TxtBox.Text.Split(' ');
-            
-            int t, a, b;
-            t = Convert.ToInt32(query[0]);
-            a = Convert.ToInt32(query[1]);
-            b = Convert.ToInt32(query[2]);
+            File.WriteAllText("tes.txt", TxtBox.Text); //inputan manual diubah ke dalam bentuk tes.txt
 
-            tes.query[0] = Tuple.Create(t, a, b);
+            tes.getInputQuery("F:/Hide-And-Seek-Problem/WpfApp2/WpfApp2/bin/Debug/tes.txt");
         }
 
-        private void Button_Click_3(object sender, RoutedEventArgs e) //cek jawaban
+        private void Button_Click_3(object sender, RoutedEventArgs e) //button jawaban
         {
             tes.Solve();
 
