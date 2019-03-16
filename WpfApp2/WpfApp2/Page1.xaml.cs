@@ -37,7 +37,7 @@ namespace WpfApp2
 
             file.ShowDialog();
 
-            tes.getInput(file.FileName);
+            tes.getInputGraph(file.FileName);
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e) //buat query dari file eksternal
@@ -48,12 +48,27 @@ namespace WpfApp2
 
             fileQuery.ShowDialog();
 
-            
+            tes.getInputQuery(fileQuery.FileName);
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e) //buat query manual
+        private void Button_Click_2(object sender, RoutedEventArgs e) //buat input query secara manual tapi baru bisa satu query doang
         {
+            string[] query = TxtBox.Text.Split(' ');
+            
+            int t, a, b;
+            t = Convert.ToInt32(query[0]);
+            a = Convert.ToInt32(query[1]);
+            b = Convert.ToInt32(query[2]);
 
+            tes.query[0] = Tuple.Create(t, a, b);
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e) //cek jawaban
+        {
+            tes.Solve();
+
+            Page2 pg2 = new Page2(tes.arrJawaban, tes.neff);
+            ((MainWindow)Application.Current.MainWindow).Content = pg2;
         }
     }
 }

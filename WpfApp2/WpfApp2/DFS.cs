@@ -22,12 +22,17 @@ namespace WpfApp2
         public Tuple<int, int, int>[] query;
         //stack
         public Stack<int> st;
+        //jawaban
+        public string jawaban;
+        //array of jawaban
+        public string[] arrJawaban;
+        //neff dari array jawaban
+        public int neff;
 
-        public void getInput(string s)
+        public void getInputGraph(string s)
         {
             string[] lines = System.IO.File.ReadAllLines(s);
             int cnt = 0;
-            int qcnt = 0;
             foreach (string line in lines)
             {
                 if (cnt == 0)
@@ -59,7 +64,17 @@ namespace WpfApp2
                     Adj[b].Add(a);
                     cnt++;
                 }
-                else if (cnt == N)
+            }
+        }
+
+        public void getInputQuery(string s)
+        {
+            string[] lines = System.IO.File.ReadAllLines(s);
+            int cnt = 0;
+            int qcnt = 0;
+            foreach(string line in lines)
+            {
+                if (cnt == 0)
                 {
                     Q = Convert.ToInt32(line);
                     cnt++;
@@ -78,7 +93,6 @@ namespace WpfApp2
                 }
             }
         }
-
         public void generate(int node)
         {
             st = new Stack<int>();
@@ -123,6 +137,7 @@ namespace WpfApp2
 
         public void Solve()
         {
+            neff = 0;
             generate(0);
             for (int i = 0; i < Q; i++)
             {
@@ -130,9 +145,11 @@ namespace WpfApp2
                 int a = query[i].Item2;
                 int b = query[i].Item3;
                 if (Answer(t, a, b))
-                    Console.WriteLine("YA");
+                    jawaban = t + " " + a + " " + b + " YA";
                 else
-                    Console.WriteLine("TIDAK");
+                    jawaban = t + " " + a + " " + b + " TIDAK";
+                arrJawaban[i] = jawaban;
+                neff++;
             }
         }
     }
