@@ -22,6 +22,7 @@ namespace WpfApp1
     {
         Canvas canvas;
         DFS graf;
+        Tuple<double,double>[] historyDraw;
         
 
         public MainWindow()
@@ -34,13 +35,17 @@ namespace WpfApp1
             double y = 10;
 
 
-            CreateEllipse(canvas,1, x, y);
-            graf.getInput("C:\\Users\\user\\source\\repos\\WpfApp1\\WpfApp1\\testing.txt");
+            CreateEllipse(canvas,1, x, y, 0);
+            //directory sesuaikan!!!
+            graf.getInputGraph("H:\\testing.txt");
+            //directory sesuaikan!!!
+            graf.getInputQuery("H:\\query.txt");
+            historyDraw = new Tuple<double, double>[graf.N];
             DrawNode(0, x+40, y);
-
+            Solve();
         }
 
-        void CreateEllipse(Canvas canvas, int num_node, double desiredLeft, double desiredTop)
+        void CreateEllipse(Canvas canvas, int num_node, double desiredLeft, double desiredTop, int tipe)
         {
             // Inisialisasi elemen2 graf
             Grid element = new Grid();
@@ -55,7 +60,11 @@ namespace WpfApp1
             };
 
             // Setting tampilan graf
-            myEllipse.Fill = Brushes.Blue;
+            if (tipe == 0) myEllipse.Fill = Brushes.Blue;
+            else
+            {
+                myEllipse.Fill = Brushes.Red;
+            }
             myEllipse.Width = 20;
             myEllipse.Height = 20;
 
@@ -93,17 +102,16 @@ namespace WpfApp1
                             tempy += 30;
                         }
                     }
-                    //P = new Point(tempx, tempy);
-                    //GrafPos.Add(P);
                     tempx += 40;
                     DrawLine(canvas, parentx - 20, parenty + 10, tempx - 30, tempy + 10);
-                    CreateEllipse(canvas, nxt + 1, tempx - 40, tempy);
+                    CreateEllipse(canvas, nxt + 1, tempx - 40, tempy, 0);
+                    historyDraw[nxt] = Tuple.Create(tempx - 40, tempy);
                     DrawNode(nxt, tempx, tempy);
                     tempy += 30;
                 }
             }
         }
-
+        
         public void DrawLine(Canvas myCanvas,double xs, double ys, double xe, double ye)
         {
             Line line = new Line();
@@ -116,6 +124,46 @@ namespace WpfApp1
 
             line.StrokeThickness = 1;
             myCanvas.Children.Add(line);
+        }
+        
+        public void Find_Path(Tuple<int,int,int> q) 
+        {
+            int t = q.Item1;
+            int x, y;
+            if (t == 0){
+                x = q.Item3;
+                y = q.Item2;
+            }else {
+                x = q.Item2;
+                y = q.Item3;
+            }
+            bool found = false;
+            while (x != 0 && !found)
+            {
+                CreateEllipse(canvas, x + 1, historyDraw[x].Item1, historyDraw[x].Item2, 1);
+                if (x == y)
+                {
+                    found = true;
+                }
+                else
+                {
+                    x = graf.ancestor[x];
+                }
+            }
+            if (!found)
+            {
+                CreateEllipse(canvas, x + 1, historyDraw[x].Item1, historyDraw[x].Item2, 1);
+                if (x == y)
+                {
+                    found = true;
+                }
+            }
+
+        }
+
+        public void Solve()
+        {
+            Find_Path(graf.query[2]);
         }
 
     }

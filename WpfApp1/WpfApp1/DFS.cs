@@ -23,11 +23,10 @@ namespace WpfApp1
         //stack
         public Stack<int> st;
 
-        public void getInput(string s)
+        public void getInputGraph(string s)
         {
             string[] lines = System.IO.File.ReadAllLines(s);
             int cnt = 0;
-            int qcnt = 0;
             foreach (string line in lines)
             {
                 if (cnt == 0)
@@ -59,7 +58,17 @@ namespace WpfApp1
                     Adj[b].Add(a);
                     cnt++;
                 }
-                else if (cnt == N)
+            }
+        }
+
+        public void getInputQuery(string s)
+        {
+            string[] lines = System.IO.File.ReadAllLines(s);
+            int cnt = 0;
+            int qcnt = 0;
+            foreach(string line in lines)
+            {
+                if (cnt == 0)
                 {
                     Q = Convert.ToInt32(line);
                     cnt++;
@@ -78,7 +87,6 @@ namespace WpfApp1
                 }
             }
         }
-
         public void generate(int node)
         {
             st = new Stack<int>();
