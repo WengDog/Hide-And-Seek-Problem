@@ -20,7 +20,9 @@ namespace DFS
         private bool[] visited;
         //query
         private Tuple<int, int, int>[] query;
-        
+        //stack
+        private Stack<int> st;
+
         public void getInput(string s)
         {
             string[] lines = System.IO.File.ReadAllLines(s);
@@ -79,14 +81,22 @@ namespace DFS
 
         public void generate(int node)
         {
+            st = new Stack<int>();
+            st.Push(node);
             visited[node] = true;
-            for (int i = 0; i < Adj[node].Count(); i++)
+            while (st.Count() != 0)
             {
-                int nxt = Adj[node][i];
-                if (!visited[nxt])
+                int now = st.Peek();
+                st.Pop();
+                for (int i = 0; i < Adj[now].Count(); i++)
                 {
-                    ancestor[nxt] = node;
-                    generate(nxt);
+                    int nxt = Adj[now][i];
+                    if (!visited[nxt])
+                    {
+                        ancestor[nxt] = now;
+                        st.Push(nxt);
+                        visited[nxt] = true;
+                    }
                 }
             }
         }
@@ -109,7 +119,7 @@ namespace DFS
             }
             if (x == y) return true;
             else return false;
-        }   
+        }
 
         public void Solve()
         {
