@@ -4,11 +4,11 @@
 winexe
 C#
 .cs
-F:\Hide-And-Seek-Problem\WpfApp2\WpfApp2\obj\Debug\
+F:\Hide-And-Seek-Problem\WpfApp2\WpfApp2\obj\Release\
 WpfApp2
 none
 false
-DEBUG;TRACE
+TRACE
 F:\Hide-And-Seek-Problem\WpfApp2\WpfApp2\App.xaml
 3-349979442
 
@@ -16,5 +16,5 @@ F:\Hide-And-Seek-Problem\WpfApp2\WpfApp2\App.xaml
 131569487696
 MainWindow.xaml;Page1.xaml;Page2.xaml;
 
-False
+True
 

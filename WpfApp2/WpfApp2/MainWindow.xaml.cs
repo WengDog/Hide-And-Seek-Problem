@@ -28,7 +28,7 @@ namespace WpfApp2
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Page1 milihFile = new Page1();
-            this.Content = milihFile;
+            ((MainWindow)Application.Current.MainWindow).Content = milihFile;
         }
     }
 }

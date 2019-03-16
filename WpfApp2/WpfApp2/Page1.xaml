@@ -9,13 +9,13 @@
       Title="Page1">
 
     <Grid>
-        
-        <Canvas HorizontalAlignment="Left" Height="440" VerticalAlignment="Top" Width="800" Background="#FF2C486F">
-            <Label Content="PETAK UMPET" Canvas.Left="169" Canvas.Top="29" Height="87" Width="470" FontSize="72" FontFamily="Berlin Sans FB"/>
-            <Button Content="FILE PETA" Width="215" Canvas.Left="83" Canvas.Top="216" Height="59" Background="#FFCD8D4D" Click="Button_Click" FontSize="48" FontFamily="Berlin Sans FB"/>
-            <Button Content="QUERY" Width="161" Canvas.Left="540" Canvas.Top="216" Background="#FFCD8D4D" Height="59" Click="Button_Click_1" FontSize="48" FontFamily="Berlin Sans FB"/>
-        </Canvas>
 
+        <Canvas HorizontalAlignment="Left" Height="440" VerticalAlignment="Top" Width="800" Background="#FF2C486F">
+            <Button Content="FILE PETA" Width="215" Canvas.Left="83" Canvas.Top="216" Height="59" Background="#FFCD8D4D" Click="Button_Click" FontSize="48" FontFamily="Berlin Sans FB"/>
+            <Button Content="FILE QUERY" Width="257" Canvas.Left="450" Canvas.Top="197" Background="#FFCD8D4D" Height="59" Click="Button_Click_1" FontSize="48" FontFamily="Berlin Sans FB"/>
+            <TextBox Height="116" TextWrapping="Wrap" Text="QUERY MANUAL" Width="257" Canvas.Left="450" Canvas.Top="261" TextChanged="TextBox_TextChanged" FontFamily="Berlin Sans FB" FontSize="18"/>
+        </Canvas>
+        <Label Content="HIDE AND SEEK" FontSize="72" FontFamily="Berlin Sans FB Demi" Margin="150,42,126,294.6"/>
 
     </Grid>
 </Page>

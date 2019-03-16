@@ -8,7 +8,7 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Canvas HorizontalAlignment="Left" Height="420" VerticalAlignment="Top" Width="794" Margin="0,0,-0.4,0" Background="#FF2C486F">
-            <Label Content="SELAMAT DATANG" Canvas.Left="102" Canvas.Top="46" Height="87" Width="600" FontSize="72" FontFamily="Berlin Sans FB Demi"/>
+            <Label Content="HIDE AND SEEK" Canvas.Left="150" Canvas.Top="42" Height="107" Width="506" FontSize="72" FontFamily="Berlin Sans FB Demi"/>
             <Button Content="START" Width="222" Canvas.Left="289" Canvas.Top="222" Height="81" Background="#FFCD8D4D" Click="Button_Click" FontSize="48" FontFamily="Berlin Sans FB"/>
         </Canvas>
 

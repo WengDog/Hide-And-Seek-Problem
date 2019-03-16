@@ -22,24 +22,38 @@ namespace WpfApp2
     /// </summary>
     public partial class Page1 : Page
     {
+        DFS tes = new DFS();
+
         public Page1()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e) //buat masukin peta
         {
             OpenFileDialog file = new OpenFileDialog();
             file.DefaultExt = ".txt";
             file.Filter = "Text Document (.txt)|*.txt";
 
             file.ShowDialog();
+
+            tes.getInput(file.FileName);
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void Button_Click_1(object sender, RoutedEventArgs e) //buat query dari file eksternal
         {
-            Page2 milihQuery = new Page2();
-            ((MainWindow)Application.Current.MainWindow).Content = milihQuery;
+            OpenFileDialog fileQuery = new OpenFileDialog();
+            fileQuery.DefaultExt = ".txt";
+            fileQuery.Filter = "Text Document (.txt)|*.txt";
+
+            fileQuery.ShowDialog();
+
+            
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e) //buat query manual
+        {
+
         }
     }
 }
