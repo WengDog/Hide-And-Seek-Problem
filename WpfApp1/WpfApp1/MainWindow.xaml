@@ -7,6 +7,8 @@
         mc:Ignorable="d"
         Title="Hide And Seek" Height="450" Width="800">
     <Grid>
-        <Canvas Height="450" Width="800"></Canvas>
+        <Canvas Height="450" Width="800">
+            
+        </Canvas>
     </Grid>
 </Window>
