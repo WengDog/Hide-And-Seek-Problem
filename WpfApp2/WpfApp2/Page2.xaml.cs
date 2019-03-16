@@ -27,19 +27,30 @@ namespace WpfApp2
         {
             InitializeComponent();
             
-            for(int i = 0; i < neff; i++)
+            if (neff != 0)
             {
-                arrJawaban[i] = jawaban[i];
-                banyakJawaban++;
+                for (int i = 0; i < neff; i++)
+                {
+                    arrJawaban[i] = jawaban[i];
+                    banyakJawaban++;
+                }
             }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e) //untuk menampilkan jawaban dari query
         {
-            int i = 0;
-            while (i < banyakJawaban)
+            if (banyakJawaban == 0)
             {
-                
+
+            }
+            else
+            {
+                int i = 0;
+                while (i < banyakJawaban)
+                {
+
+                }
+
             }
         }
     }
