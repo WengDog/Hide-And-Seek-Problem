@@ -5,11 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Hide And Seek" Height="450" Width="800">
     <Grid>
-        <Canvas HorizontalAlignment="Left" Height="420" VerticalAlignment="Top" Width="794" Margin="0,0,-0.4,0" Background="#FF2C486F">
-            <Label Content="HIDE AND SEEK" Canvas.Left="150" Canvas.Top="42" Height="107" Width="506" FontSize="72" FontFamily="Berlin Sans FB Demi"/>
-            <Button Content="START" Width="222" Canvas.Left="289" Canvas.Top="222" Height="81" Background="#FFCD8D4D" Click="Button_Click" FontSize="48" FontFamily="Berlin Sans FB"/>
+        <Canvas HorizontalAlignment="Left" Height="420" VerticalAlignment="Top" Width="794" Margin="0,0,-0.4,0">
+            <Canvas.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FF37A8CB" Offset="1"/>
+                </LinearGradientBrush>
+            </Canvas.Background>
+            <Label Content="HIDE AND SEEK" Canvas.Left="156" Canvas.Top="10" Height="78" Width="481" FontSize="48" FontFamily="Snap ITC" Foreground="#FFF6E9E9"/>
+            <Label Content="THE GAME" Canvas.Left="237" Canvas.Top="88" Height="78" Width="320" FontSize="48" FontFamily="Snap ITC" Foreground="#FFF6E9E9"/>
+            <Button Content="START" Width="222" Canvas.Left="276" Canvas.Top="246" Height="81" Background="#FF2E8EB9" Click="Button_Click" FontSize="48" FontFamily="Snap ITC" Foreground="#FF060606"/>
         </Canvas>
 
     </Grid>

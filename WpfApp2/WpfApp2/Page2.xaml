@@ -16,9 +16,9 @@
                     <GradientStop Color="#FF2F82EA" Offset="1"/>
                 </LinearGradientBrush>
             </Canvas.Background>
+            <Canvas x:Name="graf_canvas" Height="329" Width="462" Canvas.Left="41" Canvas.Top="91" Background="#FFFDFAFA"/>
         </Canvas>
         <Label Content="ANSWER" FontSize="48" FontFamily="Snap ITC" Margin="264,10,269,375.6" Foreground="#FFFAF6F6"/>
-        <TextBox HorizontalAlignment="Left" Height="302" TextWrapping="Wrap" VerticalAlignment="Top" Width="598" Margin="95,92,0,0" FontSize="18" Text="List Jawaban" FontFamily="Berlin Sans FB" TextChanged="TextBox_TextChanged"/>
 
     </Grid>
 </Page>

@@ -17,13 +17,13 @@
                     <GradientStop Color="#FF2186D9" Offset="1"/>
                 </LinearGradientBrush>
             </Canvas.Background>
-            <Button Content="UPLOAD MAP" Width="186" Canvas.Left="300" Canvas.Top="125" Height="46" Click="Button_Click" FontSize="18" FontFamily="Snap ITC" Foreground="#FF080707" Background="#FF57A2C8"/>
-            <Button Content="UPLOAD QUERY" Width="186" Canvas.Left="300" Canvas.Top="191" Background="#FF3FA1C5" Height="44" Click="Button_Click_1" FontSize="18" FontFamily="Snap ITC"/>
-            <Button Content="INPUT YOUR QUERY" Width="240" Canvas.Left="409" Canvas.Top="257" Height="36" Background="#FF37A5DF" Click="Button_Click_2" FontSize="18" FontFamily="Snap ITC"/>
-            <Button Content="ANSWER" Width="248" Canvas.Left="274" Canvas.Top="336" Height="64" FontFamily="Snap ITC" FontSize="36" Background="#FF2A9FCA" Click="Button_Click_3"/>
-            <TextBox x:Name="TxtBox" AcceptsReturn="True" Height="35" TextWrapping="Wrap" Width="240" Canvas.Left="145" Canvas.Top="258" FontSize="18" FontFamily="Berlin Sans FB"/>
+            <Button Content="UPLOAD MAP" Width="186" Canvas.Left="305" Canvas.Top="163" Height="46" Click="Button_Click" FontSize="18" FontFamily="Snap ITC" Foreground="#FF080707" Background="#FF57A2C8"/>
+            <Button Content="UPLOAD QUERY" Width="240" Canvas.Left="153" Canvas.Top="277" Background="#FF3FA1C5" Height="44" Click="Button_Click_1" FontSize="18" FontFamily="Snap ITC"/>
+            <Button Content="INPUT YOUR QUERY" Width="240" Canvas.Left="424" Canvas.Top="277" Height="44" Background="#FF37A5DF" Click="Button_Click_2" FontSize="18" FontFamily="Snap ITC"/>
+            <Button Content="ANSWER" Width="232" Canvas.Left="286" Canvas.Top="347" Height="64" FontFamily="Snap ITC" FontSize="36" Background="#FF2A9FCA" Click="Button_Click_3"/>
+            <Label Content="Input Your Map!" FontSize="28" FontFamily="Snap ITC" Foreground="#FFF3F7F0" Height="46" Canvas.Left="259" Canvas.Top="113" Width="282"/>
+            <Label Content="HIDE AND SEEK" FontSize="48" FontFamily="Snap ITC" Margin="163,10,158,363.6" Foreground="#FFF3F7F0"/>
+            <Label Content="Choose Query from?" FontSize="28" FontFamily="Snap ITC" Margin="237,225,227,178.6" Foreground="#FFF3F7F0"/>
         </Canvas>
-        <Label Content="HIDE AND SEEK" FontSize="48" FontFamily="Snap ITC" Margin="163,10,162,326.6" Foreground="#FFF3F7F0"/>
-
     </Grid>
 </Page>

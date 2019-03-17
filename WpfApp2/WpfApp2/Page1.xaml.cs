@@ -22,14 +22,14 @@ namespace WpfApp2
     /// </summary>
     public partial class Page1 : Page
     {
-        DFS tes = new DFS();
+        DFS map = new DFS();
 
         public Page1()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e) //buat masukin peta
+        public void Button_Click(object sender, RoutedEventArgs e) //buat masukin peta
         {
             OpenFileDialog file = new OpenFileDialog();
             file.DefaultExt = ".txt";
@@ -37,10 +37,10 @@ namespace WpfApp2
 
             file.ShowDialog();
 
-            tes.getInputGraph(file.FileName);
+            map.getInputGraph(file.FileName);
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e) //buat query dari file eksternal
+        public void Button_Click_1(object sender, RoutedEventArgs e) //buat query dari file eksternal
         {
             OpenFileDialog fileQuery = new OpenFileDialog();
             fileQuery.DefaultExt = ".txt";
@@ -48,22 +48,20 @@ namespace WpfApp2
 
             fileQuery.ShowDialog();
 
-            tes.getInputQuery(fileQuery.FileName);
+            map.getInputQuery(fileQuery.FileName);
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e) //buat input query secara manual dengan cara diubah ke tes.txt baru dibaca
+        public void Button_Click_2(object sender, RoutedEventArgs e) 
         {
-            File.WriteAllText("tes.txt", TxtBox.Text); //inputan manual diubah ke dalam bentuk tes.txt
-
-            tes.getInputQuery("F:/Hide-And-Seek-Problem/WpfApp2/WpfApp2/bin/Debug/tes.txt");
+            Page3 Input_Query = new Page3(map.Adj);
+            ((MainWindow)Application.Current.MainWindow).Content = Input_Query;
         }
 
-        private void Button_Click_3(object sender, RoutedEventArgs e) //button jawaban
+        public void Button_Click_3(object sender, RoutedEventArgs e) //button jawaban
         {
-            tes.Solve();
 
-            Page2 pg2 = new Page2(tes.arrJawaban, tes.neff);
-            ((MainWindow)Application.Current.MainWindow).Content = pg2;
+            Page2 solution_page = new Page2(map.Adj,map.query);
+            ((MainWindow)Application.Current.MainWindow).Content = solution_page;
         }
     }
 }

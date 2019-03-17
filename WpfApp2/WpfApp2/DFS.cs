@@ -22,12 +22,12 @@ namespace WpfApp2
         public Tuple<int, int, int>[] query;
         //stack
         public Stack<int> st;
-        //jawaban
+        /*//jawaban
         public string jawaban;
         //array of jawaban
         public string[] arrJawaban;
         //neff dari array jawaban
-        public int neff;
+        public int neff;*/
 
         public void getInputGraph(string s)
         {
@@ -135,9 +135,8 @@ namespace WpfApp2
             else return false;
         }
 
-        public void Solve()
+        /*public void Solve()
         {
-            neff = 0;
             generate(0);
             for (int i = 0; i < Q; i++)
             {
@@ -151,6 +150,6 @@ namespace WpfApp2
                 arrJawaban[i] = jawaban;
                 neff++;
             }
-        }
+        }*/
     }
 }
