@@ -10,14 +10,20 @@
 
     <Grid>
 
-        <Canvas HorizontalAlignment="Left" Height="440" VerticalAlignment="Top" Width="800" Background="#FF2C486F">
-            <Button Content="FILE PETA" Width="215" Canvas.Left="83" Canvas.Top="147" Height="59" Background="#FFCD8D4D" Click="Button_Click" FontSize="48" FontFamily="Berlin Sans FB"/>
-            <Button Content="FILE QUERY" Width="257" Canvas.Left="83" Canvas.Top="229" Background="#FFCD8D4D" Height="59" Click="Button_Click_1" FontSize="48" FontFamily="Berlin Sans FB"/>
-            <Button Content="INPUT QUERY MANUAL" Width="257" Canvas.Left="453" Canvas.Top="228" Height="60" Background="#FFCD8D4D" Click="Button_Click_2" FontSize="24" FontFamily="Berlin Sans FB"/>
-            <Button Content="JAWABAN" Width="248" Canvas.Left="275" Canvas.Top="334" Height="64" FontFamily="Berlin Sans FB" FontSize="36" Background="#FFCD8D4D" Click="Button_Click_3"/>
-            <TextBox x:Name="TxtBox" AcceptsReturn="True" Height="59" TextWrapping="Wrap" Width="257" Canvas.Left="453" Canvas.Top="147" FontSize="18" FontFamily="Berlin Sans FB"/>
+        <Canvas HorizontalAlignment="Left" Height="440" VerticalAlignment="Top" Width="800">
+            <Canvas.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FF2186D9" Offset="1"/>
+                </LinearGradientBrush>
+            </Canvas.Background>
+            <Button Content="UPLOAD MAP" Width="186" Canvas.Left="300" Canvas.Top="125" Height="46" Click="Button_Click" FontSize="18" FontFamily="Snap ITC" Foreground="#FF080707" Background="#FF57A2C8"/>
+            <Button Content="UPLOAD QUERY" Width="186" Canvas.Left="300" Canvas.Top="191" Background="#FF3FA1C5" Height="44" Click="Button_Click_1" FontSize="18" FontFamily="Snap ITC"/>
+            <Button Content="INPUT YOUR QUERY" Width="240" Canvas.Left="409" Canvas.Top="257" Height="36" Background="#FF37A5DF" Click="Button_Click_2" FontSize="18" FontFamily="Snap ITC"/>
+            <Button Content="ANSWER" Width="248" Canvas.Left="274" Canvas.Top="336" Height="64" FontFamily="Snap ITC" FontSize="36" Background="#FF2A9FCA" Click="Button_Click_3"/>
+            <TextBox x:Name="TxtBox" AcceptsReturn="True" Height="35" TextWrapping="Wrap" Width="240" Canvas.Left="145" Canvas.Top="258" FontSize="18" FontFamily="Berlin Sans FB"/>
         </Canvas>
-        <Label Content="HIDE AND SEEK" FontSize="72" FontFamily="Berlin Sans FB Demi" Margin="144,10,132,326.6"/>
+        <Label Content="HIDE AND SEEK" FontSize="48" FontFamily="Snap ITC" Margin="163,10,162,326.6" Foreground="#FFF3F7F0"/>
 
     </Grid>
 </Page>
