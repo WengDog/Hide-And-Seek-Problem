@@ -28,3 +28,33 @@ H:\kuliah\Jurusan\Semester 4\drive-download-20190115T111548Z-001\IF2211 - Strate
 H:\kuliah\Jurusan\Semester 4\drive-download-20190115T111548Z-001\IF2211 - Strategi Algoritma\Tubes\Tubes 2\Hide-And-Seek-Problem\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
 H:\kuliah\Jurusan\Semester 4\drive-download-20190115T111548Z-001\IF2211 - Strategi Algoritma\Tubes\Tubes 2\Hide-And-Seek-Problem\WpfApp1\WpfApp1\obj\Debug\WpfApp1.exe
 H:\kuliah\Jurusan\Semester 4\drive-download-20190115T111548Z-001\IF2211 - Strategi Algoritma\Tubes\Tubes 2\Hide-And-Seek-Problem\WpfApp1\WpfApp1\obj\Debug\WpfApp1.pdb
+C:\Users\user\Documents\ITB\IF\Semester 4\Strategi Algoritma\Tubes\Hide-And-Seek-Problem\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe.config
+C:\Users\user\Documents\ITB\IF\Semester 4\Strategi Algoritma\Tubes\Hide-And-Seek-Problem\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe
+C:\Users\user\Documents\ITB\IF\Semester 4\Strategi Algoritma\Tubes\Hide-And-Seek-Problem\WpfApp1\WpfApp1\bin\Debug\WpfApp1.pdb
+C:\Users\user\Documents\ITB\IF\Semester 4\Strategi Algoritma\Tubes\Hide-And-Seek-Problem\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csprojAssemblyReference.cache
+C:\Users\user\Documents\ITB\IF\Semester 4\Strategi Algoritma\Tubes\Hide-And-Seek-Problem\WpfApp1\WpfApp1\obj\Debug\MainWindow.g.cs
+C:\Users\user\Documents\ITB\IF\Semester 4\Strategi Algoritma\Tubes\Hide-And-Seek-Problem\WpfApp1\WpfApp1\obj\Debug\App.g.cs
+C:\Users\user\Documents\ITB\IF\Semester 4\Strategi Algoritma\Tubes\Hide-And-Seek-Problem\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+C:\Users\user\Documents\ITB\IF\Semester 4\Strategi Algoritma\Tubes\Hide-And-Seek-Problem\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+C:\Users\user\Documents\ITB\IF\Semester 4\Strategi Algoritma\Tubes\Hide-And-Seek-Problem\WpfApp1\WpfApp1\obj\Debug\MainWindow.baml
+C:\Users\user\Documents\ITB\IF\Semester 4\Strategi Algoritma\Tubes\Hide-And-Seek-Problem\WpfApp1\WpfApp1\obj\Debug\WpfApp1.g.resources
+C:\Users\user\Documents\ITB\IF\Semester 4\Strategi Algoritma\Tubes\Hide-And-Seek-Problem\WpfApp1\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+C:\Users\user\Documents\ITB\IF\Semester 4\Strategi Algoritma\Tubes\Hide-And-Seek-Problem\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.cache
+C:\Users\user\Documents\ITB\IF\Semester 4\Strategi Algoritma\Tubes\Hide-And-Seek-Problem\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\ITB\IF\Semester 4\Strategi Algoritma\Tubes\Hide-And-Seek-Problem\WpfApp1\WpfApp1\obj\Debug\WpfApp1.exe
+C:\Users\user\Documents\ITB\IF\Semester 4\Strategi Algoritma\Tubes\Hide-And-Seek-Problem\WpfApp1\WpfApp1\obj\Debug\WpfApp1.pdb
+C:\Users\user\Desktop\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe.config
+C:\Users\user\Desktop\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe
+C:\Users\user\Desktop\WpfApp1\WpfApp1\bin\Debug\WpfApp1.pdb
+C:\Users\user\Desktop\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csprojAssemblyReference.cache
+C:\Users\user\Desktop\WpfApp1\WpfApp1\obj\Debug\MainWindow.g.cs
+C:\Users\user\Desktop\WpfApp1\WpfApp1\obj\Debug\App.g.cs
+C:\Users\user\Desktop\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+C:\Users\user\Desktop\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+C:\Users\user\Desktop\WpfApp1\WpfApp1\obj\Debug\MainWindow.baml
+C:\Users\user\Desktop\WpfApp1\WpfApp1\obj\Debug\WpfApp1.g.resources
+C:\Users\user\Desktop\WpfApp1\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+C:\Users\user\Desktop\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.cache
+C:\Users\user\Desktop\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\WpfApp1\WpfApp1\obj\Debug\WpfApp1.exe
+C:\Users\user\Desktop\WpfApp1\WpfApp1\obj\Debug\WpfApp1.pdb

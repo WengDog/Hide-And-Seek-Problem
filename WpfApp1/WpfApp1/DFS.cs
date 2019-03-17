@@ -76,7 +76,7 @@ namespace WpfApp1
                 }
                 else
                 {
-                    string[] inp = line.Split(' ');
+                    string[] inp = line.Split(' '); 
                     int t, a, b;
                     t = Convert.ToInt32(inp[0]);
                     a = Convert.ToInt32(inp[1]);
