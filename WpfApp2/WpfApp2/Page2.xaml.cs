@@ -282,5 +282,21 @@ namespace WpfApp2
                 Reset_Path(graf.query[i]);
             }
         }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            for(int i = 0; i < graf.Q; i++)
+            {
+                int t = graf.query[i].Item1;
+                int a = graf.query[i].Item2;
+                int b = graf.query[i].Item3;
+
+                if (graf.Answer(t, a, b))
+                    TxtBox.Text = "Dengan query " + t + " " + a + " " + b + " Jose berhasil menemukan Ferdiant.";
+                else
+                    TxtBox.Text = "Dengan query " + t + " " + a + " " + b + " Jose tidak berhasil menemukan Ferdiant.";
+                TxtBox.Text = "\n";
+            }
+        }
     }
 }

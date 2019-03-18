@@ -14,9 +14,9 @@
                     <GradientStop Color="#FF37A8CB" Offset="1"/>
                 </LinearGradientBrush>
             </Canvas.Background>
-            <Label Content="HIDE AND SEEK" Canvas.Left="156" Canvas.Top="10" Height="78" Width="481" FontSize="48" FontFamily="Snap ITC" Foreground="#FFF6E9E9"/>
-            <Label Content="THE GAME" Canvas.Left="237" Canvas.Top="88" Height="78" Width="320" FontSize="48" FontFamily="Snap ITC" Foreground="#FFF6E9E9"/>
-            <Button Content="START" Width="222" Canvas.Left="276" Canvas.Top="246" Height="81" Background="#FF2E8EB9" Click="Button_Click" FontSize="48" FontFamily="Snap ITC" Foreground="#FF060606"/>
+            <Label Content="HIDE AND SEEK" Canvas.Left="154" Canvas.Top="32" Height="69" Width="490" FontSize="72" FontFamily="STCaiyun" Foreground="#FFF6E9E9"/>
+            <Label Content="THE GAME" Canvas.Left="279" Canvas.Top="106" Height="49" Width="221" FontSize="48" FontFamily="STCaiyun" Foreground="#FFF6E9E9"/>
+            <Button Content="START" Width="196" Canvas.Left="290" Canvas.Top="218" Height="65" Background="{x:Null}" Click="Button_Click" FontSize="72" FontFamily="STCaiyun" Foreground="#FFFFFDFD" BorderBrush="{x:Null}"/>
         </Canvas>
 
     </Grid>

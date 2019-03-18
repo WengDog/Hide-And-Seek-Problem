@@ -16,7 +16,7 @@
                     <GradientStop Color="#FF2F82EA" Offset="1"/>
                 </LinearGradientBrush>
             </Canvas.Background>
-            <Label Content="MAP" FontSize="24" FontFamily="Snap ITC" Foreground="#FFFAF6F6" Canvas.Left="297" Canvas.Top="42"/>
+            <Label Content="MAP" FontSize="36" FontFamily="STCaiyun" Foreground="#FFFAF6F6" Canvas.Left="297" Canvas.Top="42"/>
             <Canvas x:Name="graf_canvas" Height="547" Width="602" Canvas.Left="48" Canvas.Top="89" Background="#FFFDFAFA">
                 <Canvas.OpacityMask>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -26,5 +26,7 @@
                 </Canvas.OpacityMask>
             </Canvas>
         </Canvas>
+        <TextBox x:Name="TxtBox" HorizontalAlignment="Left" Height="551" TextWrapping="Wrap" VerticalAlignment="Top" Width="293" Margin="676,87,0,0" FontSize="16" TextChanged="TextBox_TextChanged"/>
+        <Label Content="ANSWER" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="755,39,0,0" Foreground="#FFFDFDFD" Width="140" FontFamily="STCaiyun" FontSize="36"/>
     </Grid>
 </Page>

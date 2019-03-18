@@ -22,12 +22,11 @@ namespace WpfApp2
         public Tuple<int, int, int>[] query;
         //stack
         public Stack<int> st;
-        /*//jawaban
-        public string jawaban;
+        //jawaban
+        //public string jawaban;
         //array of jawaban
-        public string[] arrJawaban;
-        //neff dari array jawaban
-        public int neff;*/
+        //public string[] arrJawaban;
+        
 
         public void getInputGraph(string s)
         {

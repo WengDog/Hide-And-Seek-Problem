@@ -17,12 +17,12 @@
                     <GradientStop Color="#FF278ADA" Offset="1"/>
                 </LinearGradientBrush>
             </Canvas.Background>
-            <Button Content="UPLOAD MAP" Width="186" Canvas.Left="305" Canvas.Top="90" Height="46" Click="Button_Click" FontSize="18" FontFamily="Snap ITC" Foreground="#FF080707" Background="#FF57A2C8"/>
-            <Button Content="UPLOAD QUERY" Width="240" Canvas.Left="163" Canvas.Top="207" Background="#FF2C5A6B" Height="44" Click="Button_Click_1" FontSize="18" FontFamily="Snap ITC"/>
-            <Button Content="INPUT YOUR QUERY" Width="240" Canvas.Left="403" Canvas.Top="207" Height="44" Background="#FF4AAFE4" Click="Button_Click_2" FontSize="18" FontFamily="Snap ITC"/>
-            <Button Content="ANSWER" Width="186" Canvas.Left="305" Canvas.Top="305" Height="48" FontFamily="Snap ITC" FontSize="24" Background="#FF2A9FCA" Click="Button_Click_3"/>
-            <Label Content="Input Your Map!" FontSize="28" FontFamily="Snap ITC" Foreground="#FFF3F7F0" Height="46" Canvas.Left="254" Canvas.Top="38" Width="282"/>
-            <Label Content="Choose Query from?" FontSize="28" FontFamily="Snap ITC" Foreground="#FFF3F7F0" Canvas.Left="233" Canvas.Top="156"/>
+            <Button Content="UPLOAD MAP" Width="186" Canvas.Left="305" Canvas.Top="90" Height="46" Click="Button_Click" FontSize="24" FontFamily="STCaiyun" Foreground="#FFFCFBFB" Background="{x:Null}" BorderBrush="{x:Null}"/>
+            <Button Content="UPLOAD QUERY" Width="240" Canvas.Left="150" Canvas.Top="207" Background="{x:Null}" Height="44" Click="Button_Click_1" FontSize="24" FontFamily="STCaiyun" BorderBrush="{x:Null}" Foreground="#FFFCF9F9"/>
+            <Button Content="INPUT YOUR QUERY" Width="240" Canvas.Left="390" Canvas.Top="207" Height="44" Background="{x:Null}" Click="Button_Click_2" FontSize="24" FontFamily="STCaiyun" BorderBrush="{x:Null}" Foreground="#FFFDFCFC"/>
+            <Button Content="ANSWER" Width="186" Canvas.Left="305" Canvas.Top="307" Height="48" FontFamily="STCaiyun" FontSize="36" Background="{x:Null}" Click="Button_Click_3" BorderBrush="{x:Null}" Foreground="#FFFDFCFC"/>
+            <Label Content="Input Your Map!" FontSize="36" FontFamily="STCaiyun" Foreground="#FFF3F7F0" Height="46" Canvas.Left="261" Canvas.Top="39" Width="268"/>
+            <Label Content="Choose Query from?" FontSize="36" FontFamily="STCaiyun" Foreground="#FFF3F7F0" Canvas.Left="231" Canvas.Top="159"/>
         </Canvas>
     </Grid>
 </Page>
