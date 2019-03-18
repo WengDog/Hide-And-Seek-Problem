@@ -78,3 +78,5 @@ C:\Users\user\Desktop\WpfApp2\WpfApp2\obj\Debug\WpfApp2.exe
 C:\Users\user\Desktop\WpfApp2\WpfApp2\obj\Debug\WpfApp2.pdb
 F:\Hide-And-Seek-Problem\WpfApp2\WpfApp2\obj\Debug\Page3.g.cs
 F:\Hide-And-Seek-Problem\WpfApp2\WpfApp2\obj\Debug\Page3.baml
+F:\Hide-And-Seek-Problem\WpfApp2\WpfApp2\obj\Debug\newWindow.g.cs
+F:\Hide-And-Seek-Problem\WpfApp2\WpfApp2\obj\Debug\newWindow.baml

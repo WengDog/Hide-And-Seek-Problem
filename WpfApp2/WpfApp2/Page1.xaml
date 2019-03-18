@@ -8,15 +8,13 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Page1">
 
+    <Page.Background>
+        <ImageBrush ImageSource="background/themeTron.jpg"/>
+    </Page.Background>
+
     <Grid>
 
         <Canvas HorizontalAlignment="Left" Height="440" VerticalAlignment="Top" Width="800">
-            <Canvas.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="#FF278ADA" Offset="1"/>
-                </LinearGradientBrush>
-            </Canvas.Background>
             <Button Content="UPLOAD MAP" Width="186" Canvas.Left="305" Canvas.Top="90" Height="46" Click="Button_Click" FontSize="24" FontFamily="STCaiyun" Foreground="#FFFCFBFB" Background="{x:Null}" BorderBrush="{x:Null}"/>
             <Button Content="UPLOAD QUERY" Width="240" Canvas.Left="150" Canvas.Top="207" Background="{x:Null}" Height="44" Click="Button_Click_1" FontSize="24" FontFamily="STCaiyun" BorderBrush="{x:Null}" Foreground="#FFFCF9F9"/>
             <Button Content="INPUT YOUR QUERY" Width="240" Canvas.Left="390" Canvas.Top="207" Height="44" Background="{x:Null}" Click="Button_Click_2" FontSize="24" FontFamily="STCaiyun" BorderBrush="{x:Null}" Foreground="#FFFDFCFC"/>
@@ -24,5 +22,6 @@
             <Label Content="Input Your Map!" FontSize="36" FontFamily="STCaiyun" Foreground="#FFF3F7F0" Height="46" Canvas.Left="261" Canvas.Top="39" Width="268"/>
             <Label Content="Choose Query from?" FontSize="36" FontFamily="STCaiyun" Foreground="#FFF3F7F0" Canvas.Left="231" Canvas.Top="159"/>
         </Canvas>
+        <Button Content="BACK" HorizontalAlignment="Left" VerticalAlignment="Top" Width="142" Margin="648,376,0,0" Height="64" FontFamily="STCaiyun" FontSize="36" Background="{x:Null}" Foreground="#FFFAF9F9" BorderBrush="{x:Null}" Click="Button_Click_4"/>
     </Grid>
 </Page>
