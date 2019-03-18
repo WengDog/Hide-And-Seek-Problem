@@ -53,7 +53,7 @@ namespace WpfApp2
 
         public void Button_Click_2(object sender, RoutedEventArgs e) 
         {
-            Page3 Input_Query = new Page3(map.Adj);
+            Page3 Input_Query = new Page3(map.Adj,map.N,map.visited,map.ancestor);
             ((MainWindow)Application.Current.MainWindow).Content = Input_Query;
         }
 

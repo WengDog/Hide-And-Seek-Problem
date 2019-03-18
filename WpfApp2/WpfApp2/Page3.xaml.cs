@@ -24,11 +24,14 @@ namespace WpfApp2
     {
         DFS map = new DFS();
 
-        public Page3(List<List<int>> Adj)
+        public Page3(List<List<int>> Adj, int N, bool[] visited, int[] ancestor)
         {
             InitializeComponent();
 
             map.Adj = Adj;
+            map.N = N;
+            map.visited = visited;
+            map.ancestor = ancestor;
         }
 
         //buat input query secara manual dengan cara diubah ke tes.txt baru dibaca
@@ -36,7 +39,9 @@ namespace WpfApp2
         {
             File.WriteAllText("tes.txt", TxtBox.Text); //inputan manual diubah ke dalam bentuk tes.txt
 
-            map.getInputQuery("C:\\Users\\user\\Desktop\\WpfApp2\\WpfApp2\\bin\\tes.txt");
+            map.getInputQuery("F:\\Hide-And-Seek-Problem\\WpfApp2\\WpfApp2\\bin\\Debug\\tes.txt");
+
+            MessageBox.Show("Input Generated", "Info", MessageBoxButton.OK);
         }
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
