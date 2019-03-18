@@ -60,7 +60,7 @@ namespace WpfApp2
         public void Button_Click_3(object sender, RoutedEventArgs e) //button jawaban
         {
 
-            Page2 solution_page = new Page2(map.Adj,map.query);
+            Page2 solution_page = new Page2(map.Adj,map.query,map.N,map.Q, map.visited, map.ancestor);
             ((MainWindow)Application.Current.MainWindow).Content = solution_page;
         }
     }

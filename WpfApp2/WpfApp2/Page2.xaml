@@ -5,20 +5,26 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WpfApp2"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="700" d:DesignWidth="1000"
       Title="Page2">
 
     <Grid>
-        <Canvas HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="800" Margin="0,0,0,-0.4">
+        <Canvas HorizontalAlignment="Left" Height="700" VerticalAlignment="Top" Width="1000" Margin="0,0,0,-0.4">
             <Canvas.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
                     <GradientStop Color="#FF2F82EA" Offset="1"/>
                 </LinearGradientBrush>
             </Canvas.Background>
-            <Canvas x:Name="graf_canvas" Height="329" Width="462" Canvas.Left="41" Canvas.Top="91" Background="#FFFDFAFA"/>
+            <Label Content="MAP" FontSize="24" FontFamily="Snap ITC" Foreground="#FFFAF6F6" Canvas.Left="297" Canvas.Top="42"/>
+            <Canvas x:Name="graf_canvas" Height="547" Width="602" Canvas.Left="48" Canvas.Top="89" Background="#FFFDFAFA">
+                <Canvas.OpacityMask>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Canvas.OpacityMask>
+            </Canvas>
         </Canvas>
-        <Label Content="ANSWER" FontSize="48" FontFamily="Snap ITC" Margin="264,10,269,375.6" Foreground="#FFFAF6F6"/>
-
     </Grid>
 </Page>

@@ -24,15 +24,19 @@ namespace WpfApp2
         Tuple<double, double>[] historyDraw;
         int[] painted;
 
-        public Page2(List<List<int>> Adj, Tuple<int, int, int>[] query)
+        public Page2(List<List<int>> Adj, Tuple<int, int, int>[] query,int N, int Q, bool[] visited, int[] ancestor)
         {
             
             InitializeComponent();
 
-            // inisialisasi map
+            // inisialisasi map dari page sebelumnya
             graf = new DFS();
             graf.Adj = Adj;
             graf.query = query;
+            graf.N = N;
+            graf.Q = Q;
+            graf.visited = visited;
+            graf.ancestor = ancestor;
 
             double x = 10;
             double y = 10;
@@ -84,8 +88,8 @@ namespace WpfApp2
             {
                 myEllipse.Fill = Brushes.Red;
             }
-            myEllipse.Width = 30;
-            myEllipse.Height = 30;
+            myEllipse.Width = 20;
+            myEllipse.Height = 20;
 
             // Gambar elemen pada canvas
             element.Children.Add(myEllipse);

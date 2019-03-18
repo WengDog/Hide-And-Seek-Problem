@@ -42,7 +42,7 @@ namespace WpfApp2
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
 
-            Page2 solution_page = new Page2(map.Adj,map.query);
+            Page2 solution_page = new Page2(map.Adj,map.query, map.N, map.Q,map.visited,map.ancestor);
             ((MainWindow)Application.Current.MainWindow).Content = solution_page;
         }
     }

@@ -17,8 +17,8 @@
                 </LinearGradientBrush>
             </Canvas.Background>
             <Label Content="Input Your Query Below!" FontSize="28" FontFamily="Snap ITC" Foreground="#FFF3F7F0" Height="46" Canvas.Left="31" Canvas.Top="27" Width="426"/>
-            <Button Content="Generate Input" Width="232" Canvas.Left="507" Canvas.Top="257" Height="64" FontFamily="Snap ITC" FontSize="22" Background="#FF2A9FCA" Click="Button_Click_3"/>
-            <Button Content="ANSWER" Width="232" Canvas.Left="507" Canvas.Top="345" Height="64" FontFamily="Snap ITC" FontSize="36" Background="#FF2A9FCA" Click="Button_Click_4"/>
+            <Button Content="Generate Input" Width="232" Canvas.Left="507" Canvas.Top="233" Height="64" FontFamily="Snap ITC" FontSize="22" Background="#FF2A9FCA" Click="Button_Click_3"/>
+            <Button Content="ANSWER" Width="232" Canvas.Left="507" Canvas.Top="328" Height="64" FontFamily="Snap ITC" FontSize="36" Background="#FF2A9FCA" Click="Button_Click_4"/>
         </Canvas>
         <TextBox x:Name="TxtBox" AcceptsReturn="True" TextWrapping="Wrap" Canvas.Left="145" Canvas.Top="258" FontSize="18" FontFamily="Berlin Sans FB" Margin="37,80,360,35.6"/>
     </Grid>

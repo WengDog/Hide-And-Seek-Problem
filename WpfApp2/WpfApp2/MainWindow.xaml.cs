@@ -23,6 +23,7 @@ namespace WpfApp2
         public MainWindow()
         {
             InitializeComponent();
+            this.SizeToContent = SizeToContent.WidthAndHeight;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
