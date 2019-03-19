@@ -236,9 +236,9 @@ namespace WpfApp2
             int b = query.Item3+1;
 
             if (graf.Answer(query.Item1, query.Item2, query.Item3))
-                answer.Text = "Dengan query " + t + " " + a + " " + b + "\nJose berhasil menemukan Ferdiant.";
+                answer.Text = "Dengan query " + t + " " + a + " " + b + "\nFerdiant berhasil menemukan Jose.";
             else
-                answer.Text = "Dengan query " + t + " " + a + " " + b + "\nJose tidak berhasil menemukan Ferdiant.";
+                answer.Text = "Dengan query " + t + " " + a + " " + b + "\nFerdiant tidak berhasil menemukan Jose.";
 
             Answer.Children.Add(answer);
 
