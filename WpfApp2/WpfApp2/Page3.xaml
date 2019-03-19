@@ -8,18 +8,17 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Page3">
 
+    <Page.Background>
+        <ImageBrush ImageSource="background/themeTron.jpg"/>
+    </Page.Background>
+    
     <Grid>
         <Canvas HorizontalAlignment="Left" Height="440" VerticalAlignment="Top" Width="800">
-            <Canvas.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="#FF2186D9" Offset="1"/>
-                </LinearGradientBrush>
-            </Canvas.Background>
             <Label Content="Input Your Query Below!" FontSize="36" FontFamily="STCaiyun" Foreground="#FFF3F7F0" Height="46" Canvas.Left="31" Canvas.Top="27" Width="426"/>
-            <Button Content="Generate Input" Width="254" Canvas.Left="507" Canvas.Top="233" Height="64" FontFamily="STCaiyun" FontSize="36" Background="{x:Null}" Click="Button_Click_3" BorderBrush="{x:Null}" Foreground="#FFFDFBFB"/>
-            <Button Content="ANSWER" Width="232" Canvas.Left="507" Canvas.Top="328" Height="64" FontFamily="STCaiyun" FontSize="36" Background="{x:Null}" Click="Button_Click_4" BorderBrush="{x:Null}" Foreground="#FFFDFAFA"/>
+            <Button Content="Generate Input" Width="254" Canvas.Left="507" Canvas.Top="195" Height="64" FontFamily="STCaiyun" FontSize="36" Background="{x:Null}" Click="Button_Click_3" BorderBrush="{x:Null}" Foreground="#FFFDFBFB"/>
+            <Button Content="ANSWER" Width="232" Canvas.Left="507" Canvas.Top="264" Height="64" FontFamily="STCaiyun" FontSize="36" Background="{x:Null}" Click="Button_Click_4" BorderBrush="{x:Null}" Foreground="#FFFDFAFA"/>
         </Canvas>
         <TextBox x:Name="TxtBox" AcceptsReturn="True" TextWrapping="Wrap" Canvas.Left="145" Canvas.Top="258" FontSize="18" FontFamily="Berlin Sans FB" Margin="37,80,360,35.6"/>
+        <Button Content="BACK" HorizontalAlignment="Left" VerticalAlignment="Top" Width="142" Margin="648,376,0,0" Height="64" FontFamily="STCaiyun" FontSize="36" Background="{x:Null}" Foreground="#FFFAF9F9" BorderBrush="{x:Null}" Click="Button_Click_5"/>
     </Grid>
 </Page>

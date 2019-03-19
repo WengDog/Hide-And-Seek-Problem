@@ -24,9 +24,9 @@ namespace WpfApp2
         Tuple<double, double>[] historyDraw;
         int[] painted;
 
-        public Page2(List<List<int>> Adj, Tuple<int, int, int>[] query,int N, int Q, bool[] visited, int[] ancestor)
+        public Page2(List<List<int>> Adj, Tuple<int, int, int>[] query, int N, int Q, bool[] visited, int[] ancestor)
         {
-            
+
             InitializeComponent();
 
             // inisialisasi map dari page sebelumnya
@@ -48,22 +48,6 @@ namespace WpfApp2
             DrawNode(0, x + 40, y);
             Solve();
         }
-
-        /*private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            if (graf.neff == 0)
-            {
-                //tidak ada jawaban
-            }
-            else
-            {
-                int i = 0;
-                while (i < graf.neff)
-                {
-                    //jawaban per line
-                }
-            }
-        }*/
 
         void CreateEllipse(Canvas canvas, int num_node, double desiredLeft, double desiredTop, int tipe)
         {
@@ -189,8 +173,6 @@ namespace WpfApp2
                 }
                 await Task.Delay(1000);
             }
-
-
         }
 
         public void Reset_Path(Tuple<int, int, int> q)
@@ -273,7 +255,6 @@ namespace WpfApp2
 
         public async void Solve()
         {
-
             for (int i = 0; i < graf.Q; i++)
             {
                 num_sol(graf.query[i], i);
@@ -297,6 +278,12 @@ namespace WpfApp2
                     TxtBox.Text = "Dengan query " + t + " " + a + " " + b + " Jose tidak berhasil menemukan Ferdiant.";
                 TxtBox.Text = "\n";
             }
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e) //back
+        {
+            newWindow baru = new newWindow();
+            ((MainWindow)Application.Current.MainWindow).Content = baru;
         }
     }
 }
