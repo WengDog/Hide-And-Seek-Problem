@@ -40,9 +40,9 @@ namespace WpfApp1
             double y = 10;
 
             //directory sesuaikan!!!
-            graf.getInputGraph("H:\\small.txt");
+            graf.getInputGraph("C:\\Users\\user\\Desktop\\small.txt");
             //directory sesuaikan!!!
-            graf.getInputQuery("H:\\query.txt");
+            graf.getInputQuery("C:\\Users\\user\\Desktop\\query.txt");
             historyDraw = new Tuple<double, double>[graf.N];
             historyDraw[0] = Tuple.Create(x, y);
             CreateEllipse(canvas, 1, x, y, 0);
