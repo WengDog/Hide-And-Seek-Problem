@@ -47,6 +47,7 @@ namespace WpfApp2
 
             MessageBox.Show("Input Generated", "Info", MessageBoxButton.OK);
 
+            cekQuery = true;
         }
 
         private void Button_Click_4(object sender, RoutedEventArgs e) //buat run

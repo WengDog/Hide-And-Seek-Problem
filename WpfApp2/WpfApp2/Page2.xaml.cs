@@ -226,7 +226,7 @@ namespace WpfApp2
                 HorizontalAlignment = HorizontalAlignment.Left,
                 VerticalAlignment = VerticalAlignment.Top,
                 Foreground = Brushes.White,
-                FontSize = 14,
+                FontSize = 18,
             };
 
             answer.FontFamily = new FontFamily("STCaiyun");
