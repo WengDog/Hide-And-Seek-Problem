@@ -13,7 +13,7 @@
     </Page.Background>
 
     <Grid>
-        <Canvas HorizontalAlignment="Left" Height="700" VerticalAlignment="Top" Width="1000" Margin="0,0,0,-0.4">
+        <Canvas x:Name="answer_canvas" HorizontalAlignment="Left" Height="700" VerticalAlignment="Top" Width="1000" Margin="-2,0,0,0">
             <Label Content="MAP" FontSize="36" FontFamily="STCaiyun" Foreground="#FFFAF6F6" Canvas.Left="297" Canvas.Top="42"/>
             <Canvas x:Name="graf_canvas" Height="547" Width="602" Canvas.Left="48" Canvas.Top="89" Background="#FFFDFAFA">
                 <Canvas.OpacityMask>
@@ -23,9 +23,10 @@
                     </LinearGradientBrush>
                 </Canvas.OpacityMask>
             </Canvas>
+            <TextBlock TextWrapping="Wrap" Text="TextBlock"/>
         </Canvas>
-        <TextBox x:Name="TxtBox" HorizontalAlignment="Left" Height="461" TextWrapping="Wrap" VerticalAlignment="Top" Width="293" Margin="676,87,0,0" FontSize="16" TextChanged="TextBox_TextChanged"/>
-        <Label Content="ANSWER" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="755,39,0,0" Foreground="#FFFDFDFD" Width="140" FontFamily="STCaiyun" FontSize="36"/>
+        <Label Content="ANSWER" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="741,92,0,0" Foreground="#FFFDFDFD" Width="161" FontFamily="STCaiyun" FontSize="36"/>
         <Button Content="BACK" HorizontalAlignment="Left" VerticalAlignment="Top" Width="142" Margin="827,600,0,0" Height="64" FontFamily="STCaiyun" FontSize="36" Background="{x:Null}" Foreground="#FFFAF9F9" BorderBrush="{x:Null}" Click="Button_Click_4"/>
+        <Grid x:Name="Answer" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="270" Margin="700,150,0,0"/>
     </Grid>
 </Page>

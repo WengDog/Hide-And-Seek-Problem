@@ -213,23 +213,35 @@ namespace WpfApp2
                 Find_Path();
                 await Task.Delay(1000 * painted[i]);
                 Reset_Path();
+                Pop_Up_Answer(graf.query[i]);
+                await Task.Delay(2000);
+                Answer.Children.Clear();
             }
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void Pop_Up_Answer(Tuple<int, int, int> query)
         {
-            for(int i = 0; i < graf.Q; i++)
+            TextBlock answer = new TextBlock()
             {
-                int t = graf.query[i].Item1;
-                int a = graf.query[i].Item2;
-                int b = graf.query[i].Item3;
+                HorizontalAlignment = HorizontalAlignment.Left,
+                VerticalAlignment = VerticalAlignment.Top,
+                Foreground = Brushes.White,
+                FontSize = 14,
+            };
 
-                if (graf.Answer(t, a, b))
-                    TxtBox.Text = "Dengan query " + t + " " + a + " " + b + " Jose berhasil menemukan Ferdiant.";
-                else
-                    TxtBox.Text = "Dengan query " + t + " " + a + " " + b + " Jose tidak berhasil menemukan Ferdiant.";
-                TxtBox.Text = "\n";
-            }
+            answer.FontFamily = new FontFamily("STCaiyun");
+
+            int t = query.Item1;
+            int a = query.Item2+1;
+            int b = query.Item3+1;
+
+            if (graf.Answer(query.Item1, query.Item2, query.Item3))
+                answer.Text = "Dengan query " + t + " " + a + " " + b + "\nJose berhasil menemukan Ferdiant.";
+            else
+                answer.Text = "Dengan query " + t + " " + a + " " + b + "\nJose tidak berhasil menemukan Ferdiant.";
+
+            Answer.Children.Add(answer);
+
         }
 
         private void Button_Click_4(object sender, RoutedEventArgs e) //back
