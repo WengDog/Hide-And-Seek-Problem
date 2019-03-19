@@ -22,7 +22,9 @@ namespace WpfApp2
     {
         DFS graf;
         Tuple<double, double>[] historyDraw;
+        List<int> Path_Answer;
         int[] painted;
+        bool foundSolution;
 
         public Page2(List<List<int>> Adj, Tuple<int, int, int>[] query, int N, int Q, bool[] visited, int[] ancestor)
         {
@@ -133,122 +135,71 @@ namespace WpfApp2
             myCanvas.Children.Add(line);
         }
 
-        public async void Find_Path(Tuple<int, int, int> q)
+        public async void Find_Path()
         {
-
-            int t = q.Item1;
-            int x, y;
-            if (t == 0)
+            for (int i = 0; i < Path_Answer.Count(); i++)
             {
-                x = q.Item3;
-                y = q.Item2;
-            }
-            else
-            {
-                x = q.Item2;
-                y = q.Item3;
-            }
-            bool found = false;
-            while (x != 0 && !found)
-            {
-
+                int x = Path_Answer[i];
                 CreateEllipse(graf_canvas, x + 1, historyDraw[x].Item1, historyDraw[x].Item2, 1);
-                if (x == y)
-                {
-                    found = true;
-                }
-                else
-                {
-                    x = graf.ancestor[x];
-                }
-                await Task.Delay(1000);
-            }
-            if (!found)
-            {
-
-                CreateEllipse(graf_canvas, x + 1, historyDraw[x].Item1, historyDraw[x].Item2, 1);
-                if (x == y)
-                {
-                    found = true;
-                }
                 await Task.Delay(1000);
             }
         }
 
-        public void Reset_Path(Tuple<int, int, int> q)
+        public void Reset_Path()
         {
 
-            int t = q.Item1;
-            int x, y;
-            if (t == 0)
+            for (int i = 0; i < Path_Answer.Count(); i++)
             {
-                x = q.Item3;
-                y = q.Item2;
-            }
-            else
-            {
-                x = q.Item2;
-                y = q.Item3;
-            }
-            bool found = false;
-            while (x != 0 && !found)
-            {
+                int x = Path_Answer[i];
                 CreateEllipse(graf_canvas, x + 1, historyDraw[x].Item1, historyDraw[x].Item2, 0);
-                if (x == y)
-                {
-                    found = true;
-                }
-                else
-                {
-                    x = graf.ancestor[x];
-                }
             }
-            if (!found)
-            {
-                CreateEllipse(graf_canvas, x + 1, historyDraw[x].Item1, historyDraw[x].Item2, 0);
-                if (x == y)
-                {
-                    found = true;
-                }
-            }
-
         }
 
         public void num_sol(Tuple<int, int, int> q, int idx)
         {
 
-            int t = q.Item1;
-            int x, y;
-            if (t == 0)
+            int t, a, b, x, y;
+            t = q.Item1; a = q.Item2; b = q.Item3;
+            if (!graf.Answer(t, a, b))
             {
-                x = q.Item3;
-                y = q.Item2;
+                foundSolution = false;
             }
             else
             {
-                x = q.Item2;
-                y = q.Item3;
-            }
-            bool found = false;
-            while (x != 0 && !found)
-            {
-                painted[idx]++;
-                if (x == y)
+                foundSolution = true;
+                if (t == 0)
                 {
-                    found = true;
+                    x = b; y = a;
                 }
                 else
                 {
-                    x = graf.ancestor[x];
+                    x = a; y = b;
                 }
-            }
-            if (!found)
-            {
-                painted[idx]++;
-                if (x == y)
+                bool found = false;
+                while (x != 0 && !found)
                 {
-                    found = true;
+                    painted[idx]++;
+                    Path_Answer.Add(x);
+                    if (x == y)
+                    {
+                        found = true;
+                    }
+                    else
+                    {
+                        x = graf.ancestor[x];
+                    }
                 }
+                if (!found)
+                {
+                    painted[idx]++;
+                    if (x == y)
+                    {
+                        Path_Answer.Add(x);
+                        found = true;
+                    }
+                }
+                if (t == 1)
+                    Path_Answer.Reverse();
             }
 
         }
@@ -257,10 +208,11 @@ namespace WpfApp2
         {
             for (int i = 0; i < graf.Q; i++)
             {
+                Path_Answer = new List<int>();
                 num_sol(graf.query[i], i);
-                Find_Path(graf.query[i]);
+                Find_Path();
                 await Task.Delay(1000 * painted[i]);
-                Reset_Path(graf.query[i]);
+                Reset_Path();
             }
         }
 
