@@ -20,13 +20,16 @@ namespace WpfApp2
     /// </summary>
     public partial class newWindow : Page
     {
+        // main program pada main window
         public newWindow()
         {
             InitializeComponent();
         }
 
+        // Fungsi tombol start pada menu awal
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            // ketika tombol di klik akan masuk ke page 1
             Page1 milihFile = new Page1();
             ((MainWindow)Application.Current.MainWindow).Content = milihFile;
         }

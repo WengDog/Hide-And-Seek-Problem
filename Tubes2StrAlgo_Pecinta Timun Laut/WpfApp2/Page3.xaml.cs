@@ -26,6 +26,7 @@ namespace WpfApp2
         Boolean cekFileMap = false;
         Boolean cekQuery = false;
 
+        // Fungsi inisialisasi untuk mendapatkan data inputan dari page sebelumnya
         public Page3(List<List<int>> Adj, int N, bool[] visited, int[] ancestor, Boolean boolMap)
         {
             InitializeComponent();
@@ -38,7 +39,7 @@ namespace WpfApp2
             cekFileMap = boolMap;
         }
 
-        //buat input query secara manual dengan cara diubah ke tes.txt baru dibaca
+        //Prosedur untuk input query secara manual dengan cara diubah ke tes.txt baru dibaca
         private void Button_Click_3(object sender, RoutedEventArgs e) 
         {
             File.WriteAllText("tes.txt", TxtBox.Text); //inputan manual diubah ke dalam bentuk tes.txt
@@ -50,16 +51,20 @@ namespace WpfApp2
             cekQuery = true;
         }
 
-        private void Button_Click_4(object sender, RoutedEventArgs e) //buat run
+        // Prosedur untuk pergi ke page 2 dan menampilkan hasil jawaban dari query berdasarkan inputan user
+        private void Button_Click_4(object sender, RoutedEventArgs e) 
         {
+            // cek apakah sudah input query atau belum
             if(!cekFileMap)
             {
                 MessageBox.Show("You haven't upload the map file", "Map File", MessageBoxButton.OK);
             }
+            // cek apakah format masukkan user sudah benar
             if(!cekQuery)
             {
                 MessageBox.Show("Your query is error", "Query", MessageBoxButton.OK);
             }
+            // validasi terpenuhi akan pergi ke page 2
             if(cekFileMap && cekQuery)
             {
                 Page2 solution_page = new Page2(map.Adj, map.query, map.N, map.Q, map.visited, map.ancestor);
@@ -67,6 +72,7 @@ namespace WpfApp2
             }
         }
 
+        // Prosedur untuk kembali ke page 1 ketika tombol back telah di kilk
         private void Button_Click_5(object sender, RoutedEventArgs e)
         {
             Page1 chooseFile = new Page1();

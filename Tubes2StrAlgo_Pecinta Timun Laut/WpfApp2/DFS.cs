@@ -14,20 +14,16 @@ namespace WpfApp2
         public int Q;
         //Graph representation
         public List<List<int>> Adj;
-        //ancestor of a node
+        //Ancestor of a node untuk menyimpan simpul bapaknya
         public int[] ancestor;
         //visited variables
         public bool[] visited;
-        //query
+        //Query
         public Tuple<int, int, int>[] query;
         //stack
         public Stack<int> st;
-        //jawaban
-        //public string jawaban;
-        //array of jawaban
-        //public string[] arrJawaban;
-        
 
+        // Prosedur untuk menerima input dari file eksternal
         public void getInputGraph(string s)
         {
             string[] lines = System.IO.File.ReadAllLines(s);
@@ -46,6 +42,7 @@ namespace WpfApp2
                     }
                     ancestor = new int[N];
                     visited = new bool[N];
+                    // mengeset list simpul bapak menjadi -1 dan simpul yang telah terkunjungi menjadi false
                     for (int i = 0; i < N; i++)
                     {
                         ancestor[i] = -1;
@@ -66,11 +63,13 @@ namespace WpfApp2
             }
         }
 
+        // Prosedur untuk mendapatkan query dari file eksternal
         public void getInputQuery(string s)
         {
             string[] lines = System.IO.File.ReadAllLines(s);
             int cnt = 0;
             int qcnt = 0;
+            // Memasukkan hasil input ke dalam list tuple of query
             foreach(string line in lines)
             {
                 if (cnt == 0)
@@ -92,6 +91,8 @@ namespace WpfApp2
                 }
             }
         }
+
+        // Procedure untuk mendapatkan parent dari setiap node dengan algoritma DFS
         public void generate(int node)
         {
             st = new Stack<int>();
@@ -114,6 +115,7 @@ namespace WpfApp2
             }
         }
 
+        // Fungsi untuk mencari jawaban dari tiap query yang diberikan bernilai true jika benar dan false jika tidak ditemukan solusi
         public bool Answer(int t, int goal, int from)
         {
             int x, y;
@@ -133,22 +135,5 @@ namespace WpfApp2
             if (x == y) return true;
             else return false;
         }
-
-        /*public void Solve()
-        {
-            generate(0);
-            for (int i = 0; i < Q; i++)
-            {
-                int t = query[i].Item1;
-                int a = query[i].Item2;
-                int b = query[i].Item3;
-                if (Answer(t, a, b))
-                    jawaban = t + " " + a + " " + b + " YA";
-                else
-                    jawaban = t + " " + a + " " + b + " TIDAK";
-                arrJawaban[i] = jawaban;
-                neff++;
-            }
-        }*/
     }
 }

@@ -21,11 +21,16 @@ namespace WpfApp2
     public partial class Page2 : Page
     {
         DFS graf;
+        // List untuk menyimpan jalur yang telah di warnai
         Tuple<double, double>[] historyDraw;
+        // list untuk menyimpan jalur yang akan dilalui
         List<int> Path_Answer;
+        // list untuk menyimpan berapa banyak node yang diwarnai
         int[] painted;
+        // untuk mengetahui bahwa solusi ditemukan atau tidak
         bool foundSolution;
 
+        // Main program dari page 2
         public Page2(List<List<int>> Adj, Tuple<int, int, int>[] query, int N, int Q, bool[] visited, int[] ancestor)
         {
 
@@ -51,6 +56,7 @@ namespace WpfApp2
             Solve();
         }
 
+        // Prosedur untuk membentuk graf dengan jarak yang sudah ditentukan sesuai level dari simpul masing-masing
         void CreateEllipse(Canvas canvas, int num_node, double desiredLeft, double desiredTop, int tipe)
         {
             // Inisialisasi elemen2 graf
@@ -85,14 +91,30 @@ namespace WpfApp2
             Canvas.SetTop(element, desiredTop);
         }
 
+        // Prosedur untuk menggambar garis
+        public void DrawLine(Canvas myCanvas, double xs, double ys, double xe, double ye)
+        {
+            Line line = new Line();
+            line.Stroke = Brushes.Black;
+
+            line.X1 = xs;
+            line.X2 = xe;
+            line.Y1 = ys;
+            line.Y2 = ye;
+
+            line.StrokeThickness = 1;
+            myCanvas.Children.Add(line);
+        }
+
+        // Prosedur untuk menggambarkan map atau graf secara rekursif dengan algoritma dfs
         public void DrawNode(int node, double x, double y)
         {
             graf.visited[node] = true;
             double tempy = y;
             double parentx = x;
             double parenty = y;
-            //Point P;
 
+            // menggambar graf secara rekursif
             for (int i = 0; i < graf.Adj[node].Count(); i++)
             {
                 int nxt = graf.Adj[node][i];
@@ -114,27 +136,14 @@ namespace WpfApp2
                     tempx += 40;
                     DrawLine(graf_canvas, parentx - 20, parenty + 10, tempx - 30, tempy + 10);
                     CreateEllipse(graf_canvas, nxt + 1, tempx - 40, tempy, 0);
-                    historyDraw[nxt] = Tuple.Create(tempx - 40, tempy);
+                    historyDraw[nxt] = Tuple.Create(tempx - 40, tempy); // menyimpan koordinat dari tiap graf yang terbentuk
                     DrawNode(nxt, tempx, tempy);
                     tempy += 30;
                 }
             }
         }
 
-        public void DrawLine(Canvas myCanvas, double xs, double ys, double xe, double ye)
-        {
-            Line line = new Line();
-            line.Stroke = Brushes.Black;
-
-            line.X1 = xs;
-            line.X2 = xe;
-            line.Y1 = ys;
-            line.Y2 = ye;
-
-            line.StrokeThickness = 1;
-            myCanvas.Children.Add(line);
-        }
-
+        // Prosedur untuk animasi pergerakan jalur graf
         public async void Find_Path()
         {
             for (int i = 0; i < Path_Answer.Count(); i++)
@@ -145,6 +154,7 @@ namespace WpfApp2
             }
         }
 
+        // prosedur untuk meresetwarna graf seperti semula
         public void Reset_Path()
         {
 
@@ -155,6 +165,7 @@ namespace WpfApp2
             }
         }
 
+        // Prosedur untuk mendapatkan banyak jalur dari tiap query untuk yang harus diwarnai
         public void num_sol(Tuple<int, int, int> q, int idx)
         {
 
@@ -204,21 +215,7 @@ namespace WpfApp2
 
         }
 
-        public async void Solve()
-        {
-            for (int i = 0; i < graf.Q; i++)
-            {
-                Path_Answer = new List<int>();
-                num_sol(graf.query[i], i);
-                Find_Path();
-                await Task.Delay(1000 * painted[i]);
-                Reset_Path();
-                Pop_Up_Answer(graf.query[i]);
-                await Task.Delay(2000);
-                Answer.Children.Clear();
-            }
-        }
-
+        // Prosedur untuk menampilkan hasil jawaban dari sebuah query ke layar
         private void Pop_Up_Answer(Tuple<int, int, int> query)
         {
             TextBlock answer = new TextBlock()
@@ -244,6 +241,23 @@ namespace WpfApp2
 
         }
 
+        // Prosedur yang menampilkan animasi jalur graf serta menampilkan hasil jawaban dari tiap querynya pada layar
+        public async void Solve()
+        {
+            for (int i = 0; i < graf.Q; i++)
+            {
+                Path_Answer = new List<int>();
+                num_sol(graf.query[i], i);
+                Find_Path();
+                await Task.Delay(1000 * painted[i]);
+                Reset_Path();
+                Pop_Up_Answer(graf.query[i]);
+                await Task.Delay(2000);
+                Answer.Children.Clear();
+            }
+        }
+
+        // Prosedur untuk kembali ke menu awal jika menekan tombol back
         private void Button_Click_4(object sender, RoutedEventArgs e) //back
         {
             newWindow baru = new newWindow();
